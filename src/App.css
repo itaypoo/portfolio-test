@@ -5,6 +5,11 @@
     font-family: 'Manrope', sans-serif;
 }
 
+h1 {
+    font-family: 'Rubik', sans-serif;
+    color: #4d51f8;
+}
+
 button {
     cursor: pointer;
     background-color: #4247D1;
