@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap');
+
+* {
+    font-family: 'Manrope', sans-serif;
+    color: white;
+}
+
+body{
+    background-color: #0D0B11;
+}
+
+h1 {
+    font-family: 'Rubik', sans-serif;
+    letter-spacing: 20px;
+    font-size: max(4vw, 50px);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-family: 'Krona One', sans-serif;
+    letter-spacing: 10px;
+    font-size: max(2vw, 30px);
+    margin-top: 0;
+}
+
+.container {
+    min-height: 100vh;
+    display: flex;
+}
+
+.column {
+    padding: 40px;
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+.wave-anim {
+    animation: wave 3s ease-in-out forwards infinite;
+}
+
+@keyframes wave {
+    from, to {
+        translate: -5px;
+    }
+
+    50% {
+        translate: 5px;
+    }
+}
+
+.bg-pic {
+    width: 40vw;
+    height: 40vw;
+    transition: scale ease-in-out 1s;
+}
+.bg-pic:hover {
+    scale: 1.02;
+}
+
+.projects-button {
+    margin-top: 45px;
+    width: 200px;
+}
