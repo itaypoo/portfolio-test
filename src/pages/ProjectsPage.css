@@ -1,0 +1,33 @@
+body {
+    overflow: hidden;
+}
+
+.projects-div {
+    display: flex;
+    width: 100vw;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.title-text {
+    width: 100%;
+    margin-top: 20px;
+    margin-bottom: 70px;
+    text-align: center;
+    background: linear-gradient(90deg, #4d51f8, #864df8, #4d51f8);
+    -webkit-background-clip: text;
+    color: transparent;
+    background-size: 200%;
+    animation: pan-gradient 2s linear infinite;
+    transition: 200ms ease-in-out;
+}
+
+.projects-div:has(.project-card:hover) .project-card:not(:hover) { /* wtf is this css magic??? idk what i did here */
+    opacity: 0.6;
+}
+
+.main-div:has(.projects-div > .project-card:hover) .title-text { /* if .main-div has a .projects-div that has a .project card that is hovered, set .title-text opacity */
+    opacity: 0.2;
+    scale: 0.98;
+    translate: 0 5px;
+}

@@ -1,0 +1,21 @@
+.icon-button {
+    background-color: white;
+    padding: 4px;
+    padding-bottom: 0;
+}
+
+.socials-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 130px;
+    z-index: 10;
+}
+
+.socials-position {
+    position: absolute;
+    bottom: 20px;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}

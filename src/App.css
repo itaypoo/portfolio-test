@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@900&display=swap');
 
 * {
     font-family: 'Manrope', sans-serif;
 }
 
+body{
+    background-color: #0D0B11;
+}
+
 h1 {
-    font-family: 'Rubik', sans-serif;
-    color: #4d51f8;
+    font-family: 'Outfit', sans-serif;
 }
 
 button {
@@ -16,9 +19,12 @@ button {
     font-size: 20px;
     padding: 10px 15px;
     border-radius: 100px;
-    transition: outline ease-in-out 100ms;
+    transition: ease-in-out 100ms;
 }
 button:hover {
     outline: 2px solid white;
     outline-offset: 2px;
+}
+button:active {
+    scale: 0.95;
 }

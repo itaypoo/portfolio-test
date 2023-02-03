@@ -1,0 +1,40 @@
+.card-div {
+    width: min(max(100px, 20vw), 300px);
+    aspect-ratio: 100 / 150;
+    background: #3b3c4f;
+    padding: 15px;
+    margin-left: 13px;
+    margin-right: 13px;
+    border-radius: 20px;
+    box-shadow: none;
+    transition: ease-in-out 200ms;
+    outline-offset: 3px;
+
+    display: grid;
+    grid-template-rows: 1fr 20px;
+
+    cursor: pointer;
+}
+.card-div:hover {
+    translate: 0 -8px;
+    background-image: linear-gradient(-45deg, #4d51f8, #864df8);
+    outline: 3px solid white;
+}
+.card-div:active {
+    scale: 0.95;
+}
+
+.title {
+    font-size: 30px;
+    font-weight: bold;
+    font-family: Outfit, sans-serif;
+}
+
+.flip {
+    rotate: 180deg;
+}
+
+.arrow-div {
+    display: flex;
+    justify-content: end;
+}
