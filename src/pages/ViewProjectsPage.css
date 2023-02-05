@@ -1,0 +1,85 @@
+.grid-vertical {
+    height: 100vh;
+    width: 80vw;
+    display: flex;
+    flex-direction: column;
+}
+.grid-item {
+    width: 80vw;
+}
+
+.main-div2 {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.grid-item > .overflow-hider {
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 9vw;
+    z-index: 2;
+    background-color: #0D0B11;
+}
+.left {
+    left: 0;
+}
+.right {
+    right: 0;
+}
+
+.project-title {
+    margin-top: 0;
+    color: white;
+    translate: 100%;
+    animation: textscroll 15s linear infinite;
+}
+.project-desc {
+    font-size: 20px;
+    overflow-wrap: anywhere;
+}
+
+@keyframes textscroll {
+    to {
+        translate: -75%;
+    }
+    from{
+        translate:102%;
+    }
+}
+
+.details-card-container {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.project-details-card {
+    margin-top: 80px;
+    width: 24vw;
+    padding: 10px 10px;
+    border-radius: 10px;
+    background-color: #24212d;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: ease-in-out 200ms;
+}
+.project-details-card:hover{
+    scale: 1.03;
+}
+.project-details-card > .card-title {
+    font-size: 30px;
+}
+.project-details-card > span {
+    display: flex;
+    align-items: end;
+}
+.project-details-card > span > img {
+    width: 23px;
+    height: 23px;
+    margin-right: 5px;
+    filter: invert(100%) hue-rotate(287deg) brightness(108%) contrast(101%);
+}

@@ -1,6 +1,8 @@
 import ProjectCard from "../components/ProjectCard";
 import './ProjectsPage.css'
 
+const steamLogo: string = require('../images/github.png')
+
 export default function ProjectsPage(){
     const wobbleDesc = "Wobbl is a charming platformer about editing the level while playing it, to your advantage. The level is your playground - use Edit Wands in a selection of colourful levels to help you carve a path."
     const photoblocksDesc = "Share your memories easily with your friends and family with the photoblocks Android app. After you've signed up with your phone number, create a block and invite your friends to join in which you can upload photos that deserve to stay."
@@ -10,9 +12,9 @@ export default function ProjectsPage(){
         <div className={"main-div"}>
             <h1 className={"title-text"}>Projects</h1>
             <div className={"projects-div"}>
-                <ProjectCard title={"Wobbl - The Lost Wands"} desc={wobbleDesc}/>
-                <ProjectCard title={"Photoblocks"} desc={photoblocksDesc}/>
-                <ProjectCard title={"This website"} desc={websiteDesc}/>
+                <ProjectCard title={"Wobbl - The Lost Wands"} desc={wobbleDesc} href={"/project/wobbl"}/>
+                <ProjectCard title={"Photoblocks"} desc={photoblocksDesc} href={"/project/photoblocks"}/>
+                <ProjectCard title={"This website"} desc={websiteDesc} href={"/project/website"}/>
             </div>
         </div>
     )

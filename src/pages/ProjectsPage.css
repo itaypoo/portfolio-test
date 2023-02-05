@@ -26,7 +26,7 @@ body {
     opacity: 0.6;
 }
 
-.main-div:has(.projects-div > .project-card:hover) .title-text { /* if .main-div has a .projects-div that has a .project card that is hovered, set .title-text opacity */
+.main-div:has(.projects-div > .project-card:hover) .title-text { /*  if .main-div has a .projects-div that has a .project card that is hovered, set .title-text opacity */
     opacity: 0.2;
     scale: 0.98;
     translate: 0 5px;

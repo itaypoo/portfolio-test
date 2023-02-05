@@ -1,0 +1,97 @@
+:root {
+    --image-pos: 0vw;
+    --popup-opacity: 0;
+    --popup-z: -1;
+}
+
+.image {
+    width: 20vh;
+    height: 20vh;
+    object-fit: cover;
+    user-select: none;
+    margin: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    translate: var(--image-pos);
+    transition: ease-in-out 200ms;
+    outline-offset: 5px;
+}
+.image:hover {
+    outline: 3px solid white;
+}
+
+.images-container {
+    display: flex;
+    justify-content: center;
+    user-select: none;
+    overflow: hidden;
+    transition: translate ease-in-out 100ms;
+}
+
+.move-button {
+    height: 20vh;
+    width: 10vw;
+    position: absolute;
+    top: 16px;
+    border-radius: 0;
+    border: 0;
+    padding: 0;
+    background-color: #0D0B11;
+    z-index: 3;
+    cursor: e-resize;
+}
+.move-button:hover {
+    scale: none;
+    outline: none;
+}
+.left {
+    left: 0;
+}
+.right {
+    right: -20px;
+}
+
+.image-popup-container {
+    display: flex;
+    opacity: var(--popup-opacity);
+    z-index: var(--popup-z);
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+
+    background-color: rgba(0, 0, 0, 0.7);
+    transition: ease-in-out 200ms;
+}
+
+.image-popup-container > .image-popup {
+    height: min(70vh, 70vw);
+    width: min(70vh, 70vw);
+    border-radius: 50px 50px 0 0;
+    object-fit: cover;
+}
+.image-popup-container > .close-button {
+    height: 100px;
+    width: min(70vh, 70vw);
+
+    outline: none;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: bolder;
+    border-radius: 0 0 50px 50px;
+}
+.image-popup-container > .close-button:hover {
+    scale: none;
+    background-color: aliceblue;
+    font-size: 30px;
+}
+.image-popup-container > .close-button:active {
+    scale: none;
+    background-color: white;
+}
+
