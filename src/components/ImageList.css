@@ -24,31 +24,9 @@
     display: flex;
     justify-content: center;
     user-select: none;
-    overflow: hidden;
+    overflow-x: scroll;
+    overflow-y: hidden;
     transition: translate ease-in-out 100ms;
-}
-
-.move-button {
-    height: 20vh;
-    width: 10vw;
-    position: absolute;
-    top: 16px;
-    border-radius: 0;
-    border: 0;
-    padding: 0;
-    background-color: #0D0B11;
-    z-index: 3;
-    cursor: e-resize;
-}
-.move-button:hover {
-    scale: none;
-    outline: none;
-}
-.left {
-    left: 0;
-}
-.right {
-    right: -20px;
 }
 
 .image-popup-container {
@@ -93,5 +71,27 @@
 .image-popup-container > .close-button:active {
     scale: none;
     background-color: white;
+}
+
+
+::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #8f8f8f;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #444444;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: ease-in-out 100ms;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    outline: 2px solid white;
 }
 

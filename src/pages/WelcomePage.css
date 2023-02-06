@@ -79,3 +79,13 @@ h2 {
     margin-top: 45px;
     width: 200px;
 }
+
+@media only screen and (max-width: 600px) {
+    .column {
+        width: 100%;
+    }
+    .column.wave-anim {
+        display: none;
+        width: 0;
+    }
+}

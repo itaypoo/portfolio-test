@@ -7,7 +7,6 @@ type props = {
 
 export default function ImageList(props: props){
     const [popupImage, setPopupImage] = useState('')
-    let imagePos = 0
     let lastImage = ''
 
     if(popupImage !== lastImage){
@@ -15,16 +14,6 @@ export default function ImageList(props: props){
         document.documentElement.style.setProperty("--popup-opacity", "1")
         document.documentElement.style.setProperty("--popup-z", "5")
     }
-
-    const moveRight = () => {
-        imagePos -= 15
-        document.documentElement.style.setProperty("--image-pos", imagePos + "vw")
-    }
-    const moveLeft = () => {
-        imagePos += 15
-        document.documentElement.style.setProperty("--image-pos", imagePos + "vw")
-    }
-
     const onImageClick = (link: string) => {
         setPopupImage(link)
     }
@@ -46,12 +35,6 @@ export default function ImageList(props: props){
                     })
                 }
             </div>
-            <button className={"move-button right"} onClick={moveRight}>
-                <span className={"material-symbols-rounded flip"}>arrow_back</span>
-            </button>
-            <button className={"move-button left"} onClick={moveLeft}>
-                <span className={"material-symbols-rounded"}>arrow_back</span>
-            </button>
         </>
     )
 }
