@@ -2,14 +2,16 @@ import {useParams} from "react-router";
 import ImageList from "../components/ImageList";
 import './ViewProjectsPage.css'
 
-const wobblImg1: string = "https://upload.wikimedia.org/wikipedia/commons/4/4d/Cat_November_2010-1a.jpg"
-const wobblImg2: string = "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
-const wobblImg3: string = "https://www.purina.co.uk/sites/default/files/2020-12/Cat%20Hunting%20BehavioursHERO.jpg"
+const wobblImg1: string = require("../images/project-images/wobbl1.png")
+const wobblImg2: string = require("../images/project-images/wobbl2.png")
+const wobblImg3: string = require("../images/project-images/wobbl3.png")
+const wobblImg4: string = require("../images/project-images/wobbl4.png")
+const wobblImg5: string = require("../images/project-images/wobbl5.png")
 
 export default function ViewProjectPage(){
     const { projectname } = useParams()
 
-    const list = [wobblImg1, wobblImg2, wobblImg3,wobblImg1, wobblImg2, wobblImg3,wobblImg1, wobblImg2, wobblImg3,wobblImg2, wobblImg3,wobblImg1, wobblImg2, wobblImg3,]
+    const list = [wobblImg1, wobblImg2, wobblImg3, wobblImg4, wobblImg5, wobblImg1, wobblImg2, wobblImg3, wobblImg4, wobblImg5, ]
     const linkIcon = require("../images/link.png")
 
     let title: string = "hello world"
@@ -19,6 +21,7 @@ export default function ViewProjectPage(){
     let madeWithIcon
     let madeWith
     let linkText
+    let linkHref
 
     switch (projectname) {
         case "wobbl": {
@@ -30,6 +33,7 @@ export default function ViewProjectPage(){
             madeWithIcon = require("../images/godot-icon.png")
             madeWith = "Godot (GDscript)"
             linkText = "Download Demo"
+            linkHref = "https://store.steampowered.com/app/1919770/Wobbl__The_Lost_Wands/"
             break
         }
         case "photoblocks": {
@@ -41,6 +45,7 @@ export default function ViewProjectPage(){
             madeWithIcon = require("../images/android-studio.png")
             madeWith = "Android Studio (Kotlin)"
             linkText = "Github Repo"
+            linkHref = "https://github.com/itaypoo/photoblocks"
             break
         }
         case "website": {
@@ -52,6 +57,7 @@ export default function ViewProjectPage(){
             madeWithIcon = require("../images/react.png")
             madeWith = "React (Typescript)"
             linkText = "Github Repo"
+            linkHref = "https://github.com/itaypoo/portfolio-test"
             break
         }
     }
@@ -87,7 +93,7 @@ export default function ViewProjectPage(){
                         <div className={"project-details-card"}>
                             <span className={"card-title"}>Links</span>
                             <br/>
-                            <span> <img src={linkIcon}/> {linkText} </span>
+                            <a href={linkHref}> <img src={linkIcon}/> {linkText} </a>
                         </div>
 
                     </div>

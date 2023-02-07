@@ -84,6 +84,12 @@
     margin-right: 5px;
     filter: invert(100%) hue-rotate(287deg) brightness(108%) contrast(101%);
 }
+.project-details-card > a > img {
+    width: 23px;
+    height: 23px;
+    margin-right: 5px;
+    filter: invert(100%) hue-rotate(287deg) brightness(108%) contrast(101%);
+}
 
 @media only screen and (max-width: 800px) {
     body {
